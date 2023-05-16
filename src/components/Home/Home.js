@@ -47,7 +47,6 @@ const Home = () => {
             src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Second slide"
           />
-
           <Carousel.Caption>
             <h3>Se sei qui è perché ami i viaggi</h3>
             <p>

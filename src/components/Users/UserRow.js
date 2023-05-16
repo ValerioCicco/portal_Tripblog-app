@@ -1,4 +1,3 @@
-import "./UserRow.scss";
 import { faPencil, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -41,7 +40,7 @@ const UserRow = ({ user, deleteSuccess }) => {
                     <div>{user.surname}</div>
                 </td>
                 <td className="align-middle">
-                    <img src={base64prefix + user.userPhoto} />  
+                    <img src={base64prefix + user.userPhoto} style={{height: "300px", width: "250px"}}/>  
                 </td>
             </tr>
             <div className="col-12">

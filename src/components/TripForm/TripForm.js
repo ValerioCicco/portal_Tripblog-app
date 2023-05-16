@@ -139,7 +139,7 @@ const TripForm = ({data = {}, type}) => {
                 <label className="form-label mt-2">Immagini</label>
                 <input className="form-control form-control-sm" type="file" onChange={addPhoto}/>
             </div>}
-            {previews && previews.map(preview => <img alt="" src={base64prefix + preview} style={{width: "300px", marginTop: "10px"}} />)}
+            {previews && previews.map(preview => <img alt="" src={base64prefix + preview} style={{width: "300px", height: "200px", marginTop: "10px"}} />)}
             <div className="col-12">
                 <label className="form-label mt-2">Descrizione viaggio</label>
                 <textarea className="form-control" name="description" value={trip.description} rows="10" onChange={handleChange}></textarea>

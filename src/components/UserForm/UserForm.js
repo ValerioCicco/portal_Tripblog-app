@@ -125,7 +125,7 @@ const UserForm = ({ data = {} }) => {
                 <div className="col-12">
                     <label className="form-label my-2">Immmagine</label>
                     <input className="form-control form-control-sm" type="file" name="userPhoto" onChange={handleChange} />
-                    <img src={imgPreview} style={{width: "150px", marginTop: "10px"}} />
+                    <img src={imgPreview} style={{height: "300px", marginTop: "10px"}}/>
                 </div>
                 <div className="col-12">
                 <div className="d-flex justify-content-around mt-3">

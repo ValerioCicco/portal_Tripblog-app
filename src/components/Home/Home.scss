@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+.bgimg {
+    background-image: url("https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.f-raleway-title {
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.f-raleway {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.f-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-size: 200;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 30vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+section > p {
+    padding: 0 10px 0 10px;
+}
+
+.hidden  {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.carousel {
+    z-index: 50;
+}

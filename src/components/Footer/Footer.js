@@ -33,12 +33,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-4">
-                    <h4>LE NOSTRE SEDI</h4>
+                    <h4>HEADQUARTER</h4>
                     <ul className="list-unstyled">
                         <li><FontAwesomeIcon icon={faMapPin} style={{ color: "white" }} /> Via Sparano 24, Bari</li>
-                        <li><FontAwesomeIcon icon={faMapPin} style={{ color: "white" }} /> Via del Corso 123, Roma</li>
-                        <li><FontAwesomeIcon icon={faMapPin} style={{ color: "white" }} /> Via dei Mille 17, Bologna</li>
-                        <li><FontAwesomeIcon icon={faMapPin} style={{ color: "white" }} /> Via Alessandro Manzoni 130, Milano</li>
+                        
                     </ul>
                 </div>
                 <div className="col-4">

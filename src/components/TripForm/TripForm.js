@@ -23,11 +23,11 @@ const TripForm = ({data = {}, type}) => {
     const [photos, setPhotos] = useState([])
     const [previews, setPreviews] = useState([])
 
-    const [alertShow, setAlertShow] = useState(false); //visualizzazione alert
+    const [alertShow, setAlertShow] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
 
-    const putData = usePut("http://localhost:8080/trips", data.id); //funzione salvataggio dati
-    const postData = usePost("http://localhost:8080/trips"); //funzione per creazione dati
+    const putData = usePut("http://localhost:8080/trips", data.id);
+    const postData = usePost("http://localhost:8080/trips");
 
     const navigate = useNavigate();
 
@@ -46,9 +46,9 @@ const TripForm = ({data = {}, type}) => {
 
     const getBase64 = async (file) => {
 
-        var reader = new FileReader();          //Creo il file reader per leggere il file
-        await reader.readAsDataURL(file);       //con il metodo "readAsDataURL" leggo i dati del file passato come parametro
-        reader.onload = function () {           //Creo una funzione di load, che viene eseguita in modo asincrono quando il caricameento è completato
+        var reader = new FileReader();   
+        await reader.readAsDataURL(file);   
+        reader.onload = function () {
             setPreviews((prevValues) => {
                 return [
                     ...prevValues,
@@ -66,7 +66,7 @@ const TripForm = ({data = {}, type}) => {
         setTrip((prevValues) => {
             return {
                 ...prevValues,
-                [e.target.name]: e.target.value //tra le quadre il valore che verrà modificato
+                [e.target.name]: e.target.value
             }
         });
     }
@@ -83,16 +83,12 @@ const TripForm = ({data = {}, type}) => {
         }
     }
 
-    //Funzione di submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        //codice per il salvataggio
         if(data.id > 0) {
-            //se l'id è maggiore di 0 siamo in "edit"
             putData(trip, submitSuccess);
         }
         else {
-            //Se l'id è undefined o 0 siamo in "new"
             postData(trip, submitSuccess);
         }
     }
@@ -111,7 +107,6 @@ const TripForm = ({data = {}, type}) => {
         setAlertShow(true);
     }
 
-    //Funzione navigate
     const alertDismiss = () => {
         setAlertShow(false);
         navigate("/trips", {replace: true});

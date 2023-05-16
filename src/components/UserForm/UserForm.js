@@ -25,9 +25,6 @@ const UserForm = ({ data = {} }) => {
     const [alertShow, setAlertShow] = useState(false);
     const [alertMessage, setAlertMessage] = useState("");
 
-    //const [alertShow, setAlertShow] = useState(false);
-    //const [alertMessage, setAlertMessage] = useState("");
-
     const putData = usePut("http://localhost:8080/users", data.id);
     const postData = usePost("http://localhost:8080/users");
 

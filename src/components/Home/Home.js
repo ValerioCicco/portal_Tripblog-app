@@ -61,7 +61,6 @@ const Home = () => {
             src="https://images.pexels.com/photos/16053726/pexels-photo-16053726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="/imgs/foto.png"
           />
-
           <Carousel.Caption>
             <h3>Explain how you feel!</h3>
             <p>É la nostra filosofia di vita, raccontaci la tua storia!</p>
@@ -94,7 +93,7 @@ const Home = () => {
       </article>
       <section className={'hidden ' + (isVisible ? 'show' : '')}>
         <h1>Il nostro motto</h1>
-        <p>
+        <p className="text-center">
           Il nostro motto è "Explain How You Feel", perché crediamo che ogni
           viaggio sia un'esperienza personale e unica che va oltre le semplici
           descrizioni dei luoghi visitati.
@@ -102,7 +101,7 @@ const Home = () => {
       </section>
       <section className={'hidden ' + (isVisible ? 'show' : '')}>
         <h1 id="ourmission">La nostra mission</h1>
-        <p>
+        <p className="text-center">
           Su TripBlog cerchiamo di creare una comunità di viaggiatori
           appassionati, dove possiamo interagire con voi, scambiare opinioni e
           condividere la nostra passione per i viaggi. Quindi, se sei alla

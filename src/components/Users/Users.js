@@ -4,6 +4,7 @@ import { useGet } from "../_Hooks/Custom";
 import UserRow from "./UserRow";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
+import Loader from "../Loader/Loader";
 
 
 
@@ -52,7 +53,7 @@ const Users = () => {
             </div>
         )
     } else if(isLoading) {
-        <div>Loading...</div>;
+        <Loader />
     } else if (error) {
         <div>Errore di caricamento</div>;
     }

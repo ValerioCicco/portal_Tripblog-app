@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import TripsItem from "./TripsItem";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
+import Loader from "../Loader/Loader";
 
 const TripsPreview = () => {
   const { data, error, isLoading, mutate } = useGet("http://localhost:8080/trips");
@@ -38,7 +39,7 @@ const TripsPreview = () => {
       </div>
     );
   } else if (isLoading) {
-    <div>Loading...</div>; //Loader a tutto schermo con opacità
+    <Loader />
   } else if (error) {
     <div>Errore di caricamento</div>;
   }

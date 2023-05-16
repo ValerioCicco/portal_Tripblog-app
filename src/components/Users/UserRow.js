@@ -40,7 +40,9 @@ const UserRow = ({ user, deleteSuccess }) => {
                     <div>{user.surname}</div>
                 </td>
                 <td className="align-middle">
-                    <img src={base64prefix + user.userPhoto} style={{height: "300px", width: "250px"}}/>  
+                    <div className="d-flex justify-content-center">
+                        <img src={base64prefix + user.userPhoto} style={{height: "300px", width: "250px"}} alt=""/>  
+                    </div>
                 </td>
             </tr>
             <div className="col-12">

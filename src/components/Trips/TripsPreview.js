@@ -24,9 +24,9 @@ const TripsPreview = () => {
 
   if (data) {
     return (
-      <div className="container">
+      <div className="container mt-3">
         <h3>Elenco Viaggi</h3>
-        <Link className="btn btn-sm btn-outline-success mt-2 mb-4" to="new">Crea nuovo viaggio</Link>
+        <Link className="btn btn-sm btn-outline-success mt-3 mb-4" to="new">Crea nuovo viaggio</Link>
         <Outlet context={{ mutate }} />
         <div className="row">
           {data.map((trip) => (
@@ -38,10 +38,12 @@ const TripsPreview = () => {
         <Alert show={alertShow} onHide={alertDismiss} message={alertMessage} />
       </div>
     );
-  } else if (isLoading) {
-    <Loader />
-  } else if (error) {
-    <div>Errore di caricamento</div>;
+  } 
+  else if (isLoading) {
+    return <Loader />
+  }
+  else if (error) {
+    return <div>Errore di caricamento</div>;
   }
 };
 

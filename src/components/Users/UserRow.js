@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDelete } from "../_Hooks/Custom";
 import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 
 
 
@@ -41,7 +42,7 @@ const UserRow = ({ user, deleteSuccess }) => {
                 </td>
                 <td className="align-middle">
                     <div className="d-flex justify-content-center">
-                        <img src={base64prefix + user.userPhoto} style={{height: "300px", width: "250px"}} alt=""/>  
+                        <Image roundedCircle src={base64prefix + user.userPhoto} style={{height: "250px", width: "250px", boxShadow: "0px 0px 5px black"}} alt=""/>  
                     </div>
                 </td>
             </tr>

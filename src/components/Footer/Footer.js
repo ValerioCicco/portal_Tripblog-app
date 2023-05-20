@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer>
         <div className="container">
-            <div className="row">
+            <div className="row pt-4">
                 <div className="col-4">
                     <h4>SOCIAL NETWORK</h4>
                     <ul className="list-unstyled">

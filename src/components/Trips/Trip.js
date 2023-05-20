@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { useGet } from "../_Hooks/Custom";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircleArrowLeft, faEarthEurope, faPlaneArrival, faPlaneDeparture } from "@fortawesome/free-solid-svg-icons";
 import { format } from "date-fns";
 
 const Trip = () => {
@@ -33,7 +33,7 @@ const Trip = () => {
     );
     return (
       <>
-        <h1 className="text-center">Il mio viaggio a : {data.destination}</h1>
+        <h1 className="text-center">Il mio viaggio a {data.destination}</h1>
 
         <article className="container">
           <div className="row">
@@ -50,14 +50,17 @@ const Trip = () => {
                     </Carousel.Item>
                   ))}
               </Carousel>
-              <h1>INFORMAZIONI SUL VIAGGIO</h1>
+              <h1 className="mt-3">INFORMAZIONI SUL VIAGGIO</h1>
               <p>
+                <FontAwesomeIcon icon={faEarthEurope} style={{marginRight: "5px"}}/>
                 <b>Continente:</b> {data.continent}
               </p>
               <p>
-                <b>Data di andata:</b> {formattedDepartureDate}
+                <FontAwesomeIcon icon={faPlaneDeparture} style={{marginRight: "5px"}}/>
+                <b>Data di partenza:</b> {formattedDepartureDate}
               </p>
               <p>
+                <FontAwesomeIcon icon={faPlaneArrival} style={{marginRight: "5px"}}/>
                 <b>Data di ritorno:</b> {formattedArrivalDate}
               </p>
               <h3>DESCRIZIONE:</h3>

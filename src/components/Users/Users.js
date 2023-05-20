@@ -5,6 +5,8 @@ import UserRow from "./UserRow";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
 import Loader from "../Loader/Loader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -29,9 +31,9 @@ const Users = () => {
 
     if(data) {
         return (
-            <div className="container">
+            <div className="container mt-3">
                 <h3>I nostri utenti</h3>
-                <Link className="btn btn-sm btn-outline-success mt-2 mb-4" to="new">Nuovo Utente</Link>
+                <Link className="btn btn-sm btn-outline-success mt-3 mb-4" to="new">Nuovo Utente</Link>
                 <Outlet context={{ mutate }} />
                 <Table responsive>
                     <thead>
@@ -53,9 +55,9 @@ const Users = () => {
             </div>
         )
     } else if(isLoading) {
-        <Loader />
+        return <Loader />
     } else if (error) {
-        <div>Errore di caricamento</div>;
+        return <div>Errore di caricamento</div>;
     }
 }
 

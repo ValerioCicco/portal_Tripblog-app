@@ -28,7 +28,7 @@ const TripsItem = ({ trip, deleteSuccess }) => {
         <Card.Body>
           <Card.Title>{trip.destination}</Card.Title>
           <Card.Text>
-            Il viaggio in <b>{trip.continent}</b> raccontato da: {user.name} {user.surname}
+            Il viaggio in <b>{trip.continent}</b> raccontato da: <b style={{color: "#e17d41"}}>{user.name} {user.surname}</b>
           </Card.Text>
           <Link to={"/trips/" + trip.id}>
             <Button variant="primary">Scopri di più...</Button>

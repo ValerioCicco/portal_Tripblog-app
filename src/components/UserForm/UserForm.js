@@ -128,7 +128,7 @@ const UserForm = ({ data = {} }) => {
                     <img src={imgPreview} style={{height: "300px", marginTop: "10px"}}/>
                 </div>
                 <div className="col-12">
-                <div className="d-flex justify-content-around mt-3">
+                <div className="d-flex justify-content-around mt-3 my-3">
                     <button className="btn btn-success" type="submit">Salva</button>
                     <Link className="btn btn-outline-danger" to="/users">Annulla</Link>
                 </div>

@@ -36,7 +36,6 @@ const Footer = () => {
                     <h4>HEADQUARTER</h4>
                     <ul className="list-unstyled">
                         <li><FontAwesomeIcon icon={faMapPin} style={{ color: "white" }} /> Via Sparano 24, Bari</li>
-                        
                     </ul>
                 </div>
                 <div className="col-4">

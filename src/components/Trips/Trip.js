@@ -23,18 +23,11 @@ const Trip = () => {
   } = useGet("http://localhost:8080/trips/" + id + "/photos");
 
   if (data) {
-    const formattedDepartureDate = format(
-      new Date(data.departureDate),
-      "dd/MM/yyyy"
-    );
-    const formattedArrivalDate = format(
-      new Date(data.arrivalDate),
-      "dd/MM/yyyy"
-    );
+    const formattedDepartureDate = format(new Date(data.departureDate),"dd/MM/yyyy");
+    const formattedArrivalDate = format(new Date(data.arrivalDate),"dd/MM/yyyy");
     return (
       <>
         <h1 className="text-center">Il mio viaggio a {data.destination}</h1>
-
         <article className="container">
           <div className="row">
             <div className="col-12">

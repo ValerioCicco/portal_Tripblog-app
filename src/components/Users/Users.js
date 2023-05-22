@@ -5,8 +5,6 @@ import UserRow from "./UserRow";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
 import Loader from "../Loader/Loader";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
 
 
 

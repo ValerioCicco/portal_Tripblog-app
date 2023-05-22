@@ -27,8 +27,8 @@ const UserRow = ({ user, deleteSuccess }) => {
                     <Link className="btn text-dark mt-1" to={"edit/" + user.id}>
                         <FontAwesomeIcon icon={faPencil} />
                     </Link>
-                    <button className="btn text-danger mt-1">
-                        <FontAwesomeIcon icon={faTrashCan} onClick={() => {setShowDelete(true)}} />
+                    <button className="btn text-danger mt-1" onClick={performDelete}>
+                        <FontAwesomeIcon icon={faTrashCan} />
                     </button>
                 </td>
                 <td className="align-middle">
@@ -42,25 +42,10 @@ const UserRow = ({ user, deleteSuccess }) => {
                 </td>
                 <td className="align-middle">
                     <div className="d-flex justify-content-center">
-                        <Image roundedCircle src={base64prefix + user.userPhoto} style={{height: "250px", width: "250px", boxShadow: "0px 0px 5px black"}} alt=""/>  
+                        <Image roundedCircle src={user.userPhoto ? base64prefix + user.userPhoto : "https://tse4.mm.bing.net/th?id=OIP.tRKx_ZxX6-p2Ug326m5vBQHaHa&pid=Api&P=0&h=180"} style={{height: "250px", width: "250px", boxShadow: "0px 0px 5px black"}} alt=""/>  
                     </div>
                 </td>
             </tr>
-            <div className="col-12">
-            <Alert className="mt-2" show={showDelete} variant="danger">
-                <Alert.Heading>Vuoi eliminare l'utente {user.username} ?</Alert.Heading>
-                    <p>L'azione è irreversibile, vuoi procedere comunque ?</p>
-                    <hr />
-                    <div className="d-flex justify-content-end">
-                        <button className="btn btn-sm btn-outline-success me-2" onClick={performDelete}>
-                            Conferma
-                        </button>
-                        <button className="btn btn-sm btn-outline-danger" onClick={() => setShowDelete(false)} variant="outline-success">
-                            Annulla
-                        </button>
-                    </div>
-            </Alert>
-          </div>
         </>
         
     );

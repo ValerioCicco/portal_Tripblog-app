@@ -61,7 +61,6 @@ const TripForm = ({data = {}, type}) => {
         };
     }
 
-    // Modificare l'oggetto Trip
     const handleChange = (e) => {
         setTrip((prevValues) => {
             return {

@@ -14,7 +14,9 @@ const Header = () => {
         <Navbar.Brand href="http://localhost:3000">
           <div className="d-flex align-items-center">
             <img src="logo.png" style={{width: "35px", marginRight: "5px"}}/>
-          TRIPBLOG</div></Navbar.Brand>
+            TRIPBLOG
+          </div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
